@@ -200,6 +200,11 @@ img {
   .section__subtitle {
     margin-bottom: var(--mb-3);
   }
+
+  .header {
+    top: initial;
+    bottom: 0;
+  }
 }
 
 @media screen and (max-width: 576px) {
