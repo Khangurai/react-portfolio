@@ -14,7 +14,7 @@ const About = () => {
       <div className="about__container container">
         <Row gutter={[32, 32]} align="middle">
           <Col xs={24} md={12} className="about__img-col">
-            <img src="/src/assets/about.jpg" alt="About" className="about__img" />
+            <img src="/src/assets/profile2.jpg" alt="About" className="about__img" />
           </Col>
           
           <Col xs={24} md={12}>
