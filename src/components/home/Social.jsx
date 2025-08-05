@@ -1,4 +1,5 @@
 import React from "react";
+import { Instagram, Github, Facebook } from "lucide-react";
 
 export const Social = () => {
   return (
@@ -6,25 +7,28 @@ export const Social = () => {
       <a
         href="https://www.instagram.com/"
         className="home__social-icon"
-        traget="_blank"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <i class="uil uil-instagram"></i>
+        <Instagram size={20} />
       </a>
 
       <a
         href="https://github.com/"
         className="home__social-icon"
-        traget="_blank"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <i class="uil uil-github"></i>
+        <Github size={20} />
       </a>
 
       <a
         href="https://facebook.com/"
         className="home__social-icon"
-        traget="_blank"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <i class="uil uil-facebook-f"></i>
+        <Facebook size={20} />
       </a>
     </div>
   );

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Home, User, FileText, Briefcase, Image, MessageCircle } from "lucide-react";
 import "./header.css";
 
 const Header = () => {
@@ -14,33 +15,38 @@ const Header = () => {
           <ul className="nav__list grid">
             <li className="nav__item">
               <a href="#home" className="nav__link active">
-                <i className="uil uil-estate nav__icon"></i>
+                <Home className="nav__icon" size={20} />
                 Home
               </a>
             </li>
             <li className="nav__item">
               <a href="#about" className="nav__link">
-                <i className="uil uil-user nav__icon"></i> About
+                <User className="nav__icon" size={20} />
+                About
               </a>
             </li>
             <li className="nav__item">
               <a href="#skills" className="nav__link">
-                <i className="uil uil-file-alt nav__icon"></i> Skills
+                <FileText className="nav__icon" size={20} />
+                Skills
               </a>
             </li>
             <li className="nav__item">
               <a href="#services" className="nav__link">
-                <i className="uil uil-briefcase-alt nav__icon"></i> Services
+                <Briefcase className="nav__icon" size={20} />
+                Services
               </a>
             </li>
             <li className="nav__item">
               <a href="#portfolio" className="nav__link">
-                <i className="uil uil-scenery nav__icon"></i> portfolio
+                <Image className="nav__icon" size={20} />
+                Portfolio
               </a>
             </li>
             <li className="nav__item">
               <a href="#contact" className="nav__link">
-                <i className="uil uil-message nav__icon"></i> Contact
+                <MessageCircle className="nav__icon" size={20} />
+                Contact
               </a>
             </li>
           </ul>
@@ -50,7 +56,9 @@ const Header = () => {
           ></i>
         </div>
         <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
-          <i className="uil uil-apps"></i>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </div>
       </nav>
     </header>

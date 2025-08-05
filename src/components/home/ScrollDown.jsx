@@ -1,4 +1,5 @@
 import React from "react";
+import { ChevronDown } from "lucide-react";
 
 const ScrollDown = () => {
   return (
@@ -31,7 +32,7 @@ const ScrollDown = () => {
           />
         </svg>
         <span className="home__scroll-name">Scroll Down</span>
-        <i className="uil uil-angle-down home__scroll-arrow"></i>
+        <ChevronDown className="home__scroll-arrow" size={20} />
       </a>
     </div>
   );

@@ -1,0 +1,83 @@
+.skills__container {
+  padding: 0 1rem;
+}
+
+.skills__card {
+  border: none;
+  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+  border-radius: 1rem;
+  height: 100%;
+}
+
+.skills__card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--title-color);
+}
+
+.skills__card-title {
+  margin: 0;
+  color: var(--title-color);
+  font-size: var(--h3-font-size);
+}
+
+.skills__list {
+  padding: 1rem 0;
+}
+
+.skills__data {
+  margin-bottom: 1.5rem;
+}
+
+.skills__data:last-child {
+  margin-bottom: 0;
+}
+
+.skills__titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.skills__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  margin: 0;
+}
+
+.skills__number {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+.skills__bar {
+  height: 8px;
+}
+
+.skills__bar .ant-progress-bg {
+  border-radius: 4px;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .skills__container {
+    padding: 0 0.5rem;
+  }
+  
+  .skills__card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .skills__card-title {
+    font-size: var(--normal-font-size);
+  }
+  
+  .skills__name {
+    font-size: var(--small-font-size);
+  }
+}
