@@ -85,6 +85,7 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  padding-top: var(--header-height);
 }
 
 h1,
@@ -136,9 +137,11 @@ img {
 
 /*=============== LAYOUT ===============*/
 .container {
-  max-width: 968px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .grid {
@@ -173,8 +176,9 @@ img {
 /* For large devices */
 @media screen and (max-width: 992px) {
   .container {
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
+    max-width: 100%;
+    padding-left: var(--mb-1-5);
+    padding-right: var(--mb-1-5);
   }
 
   .button {
@@ -190,7 +194,7 @@ img {
 /* For medium devices */
 @media screen and (max-width: 768px) {
   body {
-    margin: 0 0 var(--header-height) 0;
+    padding-top: var(--header-height);
   }
 
   .section {
@@ -200,14 +204,22 @@ img {
   .section__subtitle {
     margin-bottom: var(--mb-3);
   }
-
-  .header {
-    top: initial;
-    bottom: 0;
+  
+  .container {
+    padding-left: var(--mb-1);
+    padding-right: var(--mb-1);
   }
 }
 
 @media screen and (max-width: 576px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .section {
+    padding: 1.5rem 0 3rem;
+  }
 }
 
 /* For small devices */
@@ -217,7 +229,11 @@ img {
   }
 
   .container {
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .section {
+    padding: 1rem 0 2.5rem;
   }
 }

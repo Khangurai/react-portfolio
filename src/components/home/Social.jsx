@@ -1,31 +1,39 @@
 import React from "react";
+import { Instagram, Github, Facebook } from "lucide-react";
 
 export const Social = () => {
+  const socialLinks = [
+    {
+      href: "https://www.instagram.com/",
+      icon: <Instagram size={20} />,
+      label: "Instagram"
+    },
+    {
+      href: "https://github.com/",
+      icon: <Github size={20} />,
+      label: "GitHub"
+    },
+    {
+      href: "https://facebook.com/",
+      icon: <Facebook size={20} />,
+      label: "Facebook"
+    }
+  ];
+
   return (
     <div className="home__social">
-      <a
-        href="https://www.instagram.com/"
-        className="home__social-icon"
-        traget="_blank"
-      >
-        <i class="uil uil-instagram"></i>
-      </a>
-
-      <a
-        href="https://github.com/"
-        className="home__social-icon"
-        traget="_blank"
-      >
-        <i class="uil uil-github"></i>
-      </a>
-
-      <a
-        href="https://facebook.com/"
-        className="home__social-icon"
-        traget="_blank"
-      >
-        <i class="uil uil-facebook-f"></i>
-      </a>
+      {socialLinks.map((link, index) => (
+        <a
+          key={index}
+          href={link.href}
+          className="home__social-icon"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={link.label}
+        >
+          {link.icon}
+        </a>
+      ))}
     </div>
   );
 };
