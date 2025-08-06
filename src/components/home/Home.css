@@ -4,9 +4,10 @@
 
 .home__content {
   grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: center;
-  text-align: center;
+  gap: 1.2rem;
+  /* align-items: center; */
+  /* text-align: center; */
+  top: 5rem;
 }
 
 .home__social {

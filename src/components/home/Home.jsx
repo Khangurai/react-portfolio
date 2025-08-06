@@ -8,13 +8,13 @@ import { Col, Row } from "antd";
 const Home = () => {
   return (
     <section className="home section" id="home">
-      <div className="home__containehome__contentr container grid">
+      <div className="home__container home__content container grid">
         <div className=" grid">
           <Row>
-            <Col span={12}>
+            <Col xs={{ span: 24, order: 2 }} md={{ span: 12, order: 1 }}>
               <Data />
             </Col>
-            <Col span={12}>
+            <Col xs={{ span: 24, order: 1 }} md={{ span: 12, order: 2 }}>
               <div className="home__img"></div>
             </Col>
           </Row>
