@@ -1,18 +1,25 @@
 .header {
   width: 100%;
   position: fixed;
-  top: 1rem;
+  top: 0; /* top ကို 0 မှတ်ထား */
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
+  height: 3rem;
+  display: flex; /* Flex container ဖြစ်အောင် */
+  align-items: center; /* vertical center align */
+  justify-content: space-between; /* left-right spacing */
+  padding: 0 1rem; /* left-right padding */
+  box-sizing: border-box;
 }
 
 .nav {
-  height: calc(var(--header-height)+ 1.5rem);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  column-gap: 1rem;
+  gap: 1rem; /* space between nav items */
+  height: 80%;
+  width: 100%;
+  justify-content: space-between; /* လိုလိုချင်သလိုပြင်နိုင် */
 }
 
 .nav__logo,

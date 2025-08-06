@@ -3,10 +3,20 @@ import { Row, Col, Card, Typography, Button } from "antd";
 import { Download, BookOpen, Code, Rocket } from "lucide-react";
 import "./about.css";
 import aboutImage from "../../assets/profile2.jpg";
+import CV from "../../assets/CV.pdf";
 
 const { Title, Paragraph } = Typography;
 
 const About = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = CV;
+    link.download = "John-Cv.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="about section" id="about">
       <Title level={2} className="section__title">
@@ -82,6 +92,7 @@ const About = () => {
                 size="large"
                 className="button about__button"
                 icon={<Download size={16} />}
+                onClick={handleDownload}
               >
                 Download CV
               </Button>

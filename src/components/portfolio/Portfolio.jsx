@@ -4,9 +4,8 @@ import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import "./portfolio.css";
 import work1 from "../../assets/work1.png";
 import work2 from "../../assets/work2.png";
-import work3 from "../../assets/work3.jpg";
-import work4 from "../../assets/work4.jpg";
-import work5 from "../../assets/work5.jpg";
+import work3 from "../../assets/work3.png";
+import work4 from "../../assets/work4.png";
 
 const { Title, Paragraph } = Typography;
 const { Meta } = Card;
@@ -55,8 +54,8 @@ const Portfolio = () => {
       image: work4,
       description:
         "Telegram automation bot with real-time interaction and APIs.",
-      technologies: ["React", "Node.js", "MongoDB"],
-      demoUrl: "#",
+      technologies: ["Python", "BotFather"],
+      demoUrl: "https://web.telegram.org/k/#@paradiseIO_bot",
       codeUrl: "https://github.com/Khangurai/telegram_bot",
     },
   ];
