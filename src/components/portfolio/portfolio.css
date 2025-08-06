@@ -93,10 +93,30 @@
   transform: translateY(-2px);
 }
 
+/* Portfolio Title - Fix long titles */
 .portfolio__title {
   color: var(--title-color);
   font-size: var(--h3-font-size);
   margin-bottom: 0.5rem;
+  white-space: nowrap; /* Prevent wrap */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Show "..." if too long */
+  display: block;
+  max-width: 100%;
+}
+
+/* Tooltip for full title on hover */
+.portfolio__title[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: var(--tiny-font-size);
+  top: -30px;
+  left: 0;
+  white-space: nowrap;
 }
 
 .portfolio__description {
@@ -112,12 +132,100 @@
   gap: 0.5rem;
 }
 
+/* Default tag style */
 .portfolio__tech-tag {
   background-color: var(--container-color);
   color: var(--title-color);
   border: 1px solid var(--title-color);
   border-radius: 0.5rem;
   font-size: var(--tiny-font-size);
+  padding: 2px 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* AI */
+.tech-ai:hover {
+  background-color: #7f5af0;
+  color: #fff;
+  border-color: #7f5af0;
+}
+
+/* Python */
+.tech-python:hover {
+  background-color: #3776ab;
+  color: #fff;
+  border-color: #3776ab;
+}
+
+/* Streamlit */
+.tech-streamlit:hover {
+  background-color: #ff4b4b;
+  color: #fff;
+  border-color: #ff4b4b;
+}
+
+/* Javascript */
+.tech-javascript:hover {
+  background-color: #f7df1e;
+  color: #000;
+  border-color: #f7df1e;
+}
+
+/* HTML */
+.tech-html:hover {
+  background-color: #e34f26;
+  color: #fff;
+  border-color: #e34f26;
+}
+
+/* CSS */
+.tech-css:hover {
+  background-color: #2965f1;
+  color: #fff;
+  border-color: #2965f1;
+}
+
+/* Odoo */
+.tech-odoo:hover {
+  background-color: #714b67;
+  color: #fff;
+  border-color: #714b67;
+}
+
+/* React */
+.tech-react:hover {
+  background-color: #61dafb;
+  color: #000;
+  border-color: #61dafb;
+}
+
+/* Node.js */
+.tech-node-js:hover {
+  background-color: #68a063;
+  color: #fff;
+  border-color: #68a063;
+}
+
+/* MongoDB */
+.tech-mongodb:hover {
+  background-color: #4db33d;
+  color: #fff;
+  border-color: #4db33d;
+}
+
+/* Figma */
+.tech-figma:hover {
+  background-color: #a259ff;
+  color: #fff;
+  border-color: #a259ff;
+}
+
+/* Adobe XD */
+.tech-adobe-xd:hover {
+  background-color: #ff61f6;
+  color: #fff;
+  border-color: #ff61f6;
 }
 
 /* Mobile responsive */
@@ -125,17 +233,17 @@
   .portfolio__container {
     padding: 0 0.5rem;
   }
-  
+
   .portfolio__filters {
     gap: 0.5rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .portfolio__filter {
     font-size: var(--small-font-size);
     padding: 0.5rem 1rem;
   }
-  
+
   .portfolio__img-container {
     height: 180px;
   }
@@ -145,12 +253,12 @@
   .portfolio__filters {
     gap: 0.25rem;
   }
-  
+
   .portfolio__filter {
     font-size: var(--smaller-font-size);
     padding: 0.4rem 0.8rem;
   }
-  
+
   .portfolio__img-container {
     height: 160px;
   }

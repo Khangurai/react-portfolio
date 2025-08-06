@@ -65,6 +65,7 @@
   padding: 1.25rem 2rem;
   height: auto;
   font-weight: var(--font-medium);
+  display: flex;
 }
 
 .about__button:hover {
@@ -76,19 +77,19 @@
   .about__data {
     text-align: center;
   }
-  
+
   .about__description {
     margin-bottom: 2rem;
   }
-  
+
   .about__info {
     margin-bottom: 2rem;
   }
-  
+
   .about__info-card {
     margin-bottom: 1rem;
   }
-  
+
   .about__info-title {
     font-size: var(--h3-font-size);
   }

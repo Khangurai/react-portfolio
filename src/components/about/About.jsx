@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Card, Typography, Button } from "antd";
-import { Download, Award, Briefcase, HeadphonesIcon } from "lucide-react";
+import { Download, BookOpen, Code, Rocket } from "lucide-react";
 import "./about.css";
 import aboutImage from "../../assets/profile2.jpg";
 
@@ -17,16 +17,14 @@ const About = () => {
       <div className="about__container container">
         <Row gutter={[32, 32]} align="middle">
           <Col xs={24} md={12} className="about__img-col">
-            
             <img src={aboutImage} alt="About" className="about__img" />
           </Col>
 
           <Col xs={24} md={12}>
             <div className="about__data">
               <Paragraph className="about__description">
-                Web developer, with extensive knowledge and years of experience,
-                working in web technologies and UI / UX design, delivering
-                quality work.
+                I am a beginner web developer passionate about learning and building projects.
+                Currently improving my skills in front-end and back-end development.
               </Paragraph>
 
               <Row gutter={[16, 16]} className="about__info">
@@ -35,14 +33,13 @@ const About = () => {
                     className="about__info-card"
                     bodyStyle={{ padding: "16px", textAlign: "center" }}
                   >
-                    <Award size={24} className="about__info-icon" />
+                    <BookOpen size={24} className="about__info-icon" />
                     <Title level={4} className="about__info-title">
-                      08+
+                      Learning
                     </Title>
                     <span className="about__info-name">
-                      Years
-                      <br />
-                      experience
+                      Constantly<br />
+                      improving
                     </span>
                   </Card>
                 </Col>
@@ -52,13 +49,12 @@ const About = () => {
                     className="about__info-card"
                     bodyStyle={{ padding: "16px", textAlign: "center" }}
                   >
-                    <Briefcase size={24} className="about__info-icon" />
+                    <Code size={24} className="about__info-icon" />
                     <Title level={4} className="about__info-title">
-                      20+
+                      5+
                     </Title>
                     <span className="about__info-name">
-                      Completed
-                      <br />
+                      Practice<br />
                       projects
                     </span>
                   </Card>
@@ -69,14 +65,13 @@ const About = () => {
                     className="about__info-card"
                     bodyStyle={{ padding: "16px", textAlign: "center" }}
                   >
-                    <HeadphonesIcon size={24} className="about__info-icon" />
+                    <Rocket size={24} className="about__info-icon" />
                     <Title level={4} className="about__info-title">
-                      24/7
+                      Open
                     </Title>
                     <span className="about__info-name">
-                      Online
-                      <br />
-                      support
+                      To new<br />
+                      opportunities
                     </span>
                   </Card>
                 </Col>

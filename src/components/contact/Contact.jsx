@@ -19,13 +19,13 @@ const Contact = () => {
     {
       icon: <Mail size={24} />,
       title: 'Email',
-      subtitle: 'user@gmail.com',
+      subtitle: 'glorykai7@gmail.com',
       description: 'Send me an email'
     },
     {
       icon: <MessageSquare size={24} />,
-      title: 'Whatsapp',
-      subtitle: '999-888-777',
+      title: 'Telegram',
+      subtitle: '@khangurai',
       description: 'Send me a message'
     },
     {

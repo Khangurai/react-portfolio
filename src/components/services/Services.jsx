@@ -12,38 +12,38 @@ const Services = () => {
   const services = [
     {
       icon: <Monitor size={32} />,
-      title: 'UI/UX Designer',
-      description: 'Service with more than 3 years of experience. Providing quality work to clients and companies.',
+      title: 'UI/UX Design (Learning)',
+      description: 'Currently learning how to design clean and user-friendly interfaces using modern tools.',
       details: [
-        'I develop the user interface.',
-        'Web page development.',
-        'I create UX element interactions.',
-        'I position your company brand.',
-        'Design and mockups of products for companies.'
+        'Basic UI layout and design principles.',
+        'Creating simple wireframes and mockups.',
+        'Learning color theory and typography.',
+        'Practicing responsive design.',
+        'Exploring design tools like Figma and Canva.'
       ]
     },
     {
       icon: <Smartphone size={32} />,
-      title: 'Frontend Developer',
-      description: 'Service with more than 3 years of experience. Providing quality work to clients and companies.',
+      title: 'Frontend Development (Beginner)',
+      description: 'Building small projects to practice HTML, CSS, and JavaScript, and learning React step by step.',
       details: [
-        'I develop the user interface.',
-        'Web page development.',
-        'I create UX element interactions.',
-        'I position your company brand.',
-        'Design and mockups of products for companies.'
+        'Creating simple web pages with HTML and CSS.',
+        'Adding interactivity using JavaScript.',
+        'Building basic React components.',
+        'Learning to use GitHub for project hosting.',
+        'Improving coding skills through practice.'
       ]
     },
     {
       icon: <Edit3 size={32} />,
-      title: 'Branding Designer',
-      description: 'Service with more than 3 years of experience. Providing quality work to clients and companies.',
+      title: 'Branding Practice',
+      description: 'Experimenting with logo and brand design ideas as part of my learning journey.',
       details: [
-        'I develop the user interface.',
-        'Web page development.',
-        'I create UX element interactions.',
-        'I position your company brand.',
-        'Design and mockups of products for companies.'
+        'Practicing logo creation with free tools.',
+        'Understanding basic branding concepts.',
+        'Creating simple social media graphics.',
+        'Exploring color palettes for branding.',
+        'Learning from real-world design examples.'
       ]
     }
   ];
@@ -56,7 +56,7 @@ const Services = () => {
   return (
     <section className="services section" id="services">
       <Title level={2} className="section__title">Services</Title>
-      <span className="section__subtitle">What I offer</span>
+      <span className="section__subtitle">What I'm Learning</span>
 
       <div className="services__container container">
         <Row gutter={[24, 24]}>

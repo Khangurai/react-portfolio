@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Row, Col, Card, Button, Typography, Tag } from "antd";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import "./portfolio.css";
-import work1 from "../../assets/work1.jpg";
-import work2 from "../../assets/work2.jpg";
+import work1 from "../../assets/work1.png";
+import work2 from "../../assets/work2.png";
 import work3 from "../../assets/work3.jpg";
 import work4 from "../../assets/work4.jpg";
 import work5 from "../../assets/work5.jpg";
@@ -17,72 +17,67 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Modern Website",
+      title: "AI Powered Movie Recommendation System",
       category: "web",
       image: work1,
       description:
-        "Website adaptable to all devices, with UI components and animated interactions.",
-      technologies: ["React", "CSS", "JavaScript"],
-      demoUrl: "#",
-      codeUrl: "#",
+        "Introducing an innovative movie recommendation system that leverages textual features to provide personalized and accurate suggestions.",
+      technologies: ["AI", "Python", "Streamlit"],
+      demoUrl:
+        "https://huggingface.co/spaces/Khangurai/AI_Powered_Movie_Recommendation_System",
+      codeUrl: "https://github.com/Khangurai/AI_Movie_Recommend_System",
     },
     {
       id: 2,
-      title: "Brand Design",
-      category: "design",
+      title: "Two Tango",
+      category: "web",
       image: work2,
       description:
-        "Beautiful and elegant design, with modern and attractive interfaces.",
-      technologies: ["Figma", "Photoshop"],
-      demoUrl: "#",
-      codeUrl: "#",
+        "Track shared expenses and memorable places together. Because every love story deserves to be organized beautifully.",
+      technologies: ["Javascript", "HTML", "CSS"],
+      demoUrl: "https://two-tango.vercel.app/",
+      codeUrl: "https://github.com/Khangurai/TwoTango",
     },
     {
       id: 3,
-      title: "Mobile App",
-      category: "app",
+      title: "Student Management System",
+      category: "enterprise",
       image: work3,
-      description:
-        "App developed with React Native, with modern design and smooth animations.",
-      technologies: ["React Native", "Firebase"],
+      description: "School Management System with Odoo 17",
+      technologies: ["Odoo", "Python"],
       demoUrl: "#",
-      codeUrl: "#",
+      codeUrl: "https://github.com/Khangurai/school_management_system",
     },
     {
       id: 4,
-      title: "Web Application",
-      category: "web",
+      title: "ParadiseIO Bot",
+      category: "bot", // ✅ category key ကို bot လို့ပြောင်းထား
       image: work4,
       description:
-        "Full-stack web application with authentication and real-time features.",
+        "Telegram automation bot with real-time interaction and APIs.",
       technologies: ["React", "Node.js", "MongoDB"],
       demoUrl: "#",
-      codeUrl: "#",
-    },
-    {
-      id: 5,
-      title: "UI/UX Design",
-      category: "design",
-      image: work5,
-      description:
-        "Modern and intuitive user interface design for mobile and web applications.",
-      technologies: ["Figma", "Adobe XD"],
-      demoUrl: "#",
-      codeUrl: "#",
+      codeUrl: "https://github.com/Khangurai/telegram_bot",
     },
   ];
 
   const categories = [
     { key: "all", label: "All" },
     { key: "web", label: "Web" },
-    { key: "app", label: "App" },
-    { key: "design", label: "Design" },
+    { key: "enterprise", label: "Enterprise" },
+    { key: "bot", label: "Bot" }, // ✅ filter option ထပ်ထည့်
   ];
 
   const filteredProjects =
     activeFilter === "all"
       ? projects
       : projects.filter((project) => project.category === activeFilter);
+
+  const handleCardClick = (url) => {
+    if (url && url !== "#") {
+      window.open(url, "_blank");
+    }
+  };
 
   return (
     <section className="portfolio section" id="portfolio">
@@ -114,7 +109,11 @@ const Portfolio = () => {
                 hoverable
                 className="portfolio__card"
                 cover={
-                  <div className="portfolio__img-container">
+                  <div
+                    className="portfolio__img-container"
+                    onClick={() => handleCardClick(project.demoUrl)}
+                    style={{ cursor: "pointer" }}
+                  >
                     <img
                       alt={project.title}
                       src={project.image}
@@ -126,15 +125,15 @@ const Portfolio = () => {
                           type="primary"
                           shape="circle"
                           icon={<ExternalLink size={16} />}
-                          className="portfolio__link"
                           href={project.demoUrl}
+                          target="_blank"
                         />
                         <Button
                           type="primary"
                           shape="circle"
                           icon={<Github size={16} />}
-                          className="portfolio__link"
                           href={project.codeUrl}
+                          target="_blank"
                         />
                       </div>
                     </div>
@@ -143,7 +142,11 @@ const Portfolio = () => {
               >
                 <Meta
                   title={
-                    <Title level={4} className="portfolio__title">
+                    <Title
+                      level={4}
+                      className="portfolio__title"
+                      title={project.title} // ✅ Tooltip for full title
+                    >
                       {project.title}
                     </Title>
                   }
@@ -154,11 +157,26 @@ const Portfolio = () => {
                       </Paragraph>
                       <div className="portfolio__technologies">
                         {project.technologies.map((tech, index) => (
-                          <Tag key={index} className="portfolio__tech-tag">
+                          <Tag
+                            key={index}
+                            className={`portfolio__tech-tag tech-${tech
+                              .toLowerCase()
+                              .replace(/\s+/g, "-")}`}
+                          >
                             {tech}
                           </Tag>
                         ))}
                       </div>
+
+                      {/* ✅ View Project Button
+                      <Button
+                        type="link"
+                        icon={<ArrowRight size={16} />}
+                        onClick={() => handleCardClick(project.demoUrl)}
+                        style={{ paddingLeft: 0, marginTop: 10 }}
+                      >
+                        View Project
+                      </Button> */}
                     </div>
                   }
                 />
